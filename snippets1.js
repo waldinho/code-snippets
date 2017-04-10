@@ -23,6 +23,8 @@ function add(a, b) {
     return (a + b);
 }
 
+console.log(sum);
+
 /* ===== Simple if/else with conditions ===== */
 
 var a = "James";
@@ -35,8 +37,6 @@ if (a === c && b === d) {
 else {
   alert(c + " " + d + " doesn't match " + a + " " + b);
 }
-
-console.log(sum);
 
 /* ===== Switch statement example ===== */
 
