@@ -207,13 +207,13 @@ var array = ["James", "Keely"];
 array.shift();
 console.log(array);
 
-/* ===== Remove random element from Array ===== */
+/* ===== Remove section element from Array ===== */
 
 var pets = ["dog", "cat", "ox", "duck", "frog"];
-pets.splice(1, 2);
+pets.splice(1, 3);
 console.log(pets);
 
-/* ===== Remove section element from Array ===== */
+/* ===== Remove section element from Array and into new array ===== */
 
 var pets = ["dog", "cat", "ox", "duck", "frog"];
 pets = pets.slice(3, 5);
