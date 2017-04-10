@@ -133,8 +133,8 @@ Person.prototype.initialize = function(name, age) {
 
 var Teacher = function() {
 	// Use this.teach as we are already inside Teacher
-    this.teach = function(whateveryouwantinherewillhaveteachfedin) {
-        console.log(this.name + " is now teaching " + whateveryouwantinherewillhaveteachfedinfromline132);
+    this.teach = function(whateveryouwantinherewillhaveteachfedinfromline145) {
+        console.log(this.name + " is now teaching " + whateveryouwantinherewillhaveteachfedinfromline145);
         console.log(this.name + " is " + this.age)
     }
 }
@@ -144,7 +144,7 @@ var him = new Teacher();
 him.initialize("Jimsee Bong", 32);
 him.teach("Swazzyness");
 
-/* ===== Simple nested if ===== */
+/* ===== Simple nested if statements ===== */
 
 var a = 10
 var b = 10
@@ -154,3 +154,73 @@ if (a === b) {
   }
 }
 
+/* ===== Simple nested if statements 2 ===== */
+
+var a = "James";
+var b = "Waller";
+var c = prompt("First name?");
+var d = prompt("Last name?")
+if (a === c) {
+  if (b === d) {
+    alert("You are " + a + " " + b);
+  }
+}
+else {
+  alert(c + " " + d + ". I don't know you!")
+}
+
+/* ===== Inserting into Array ===== */
+
+var emptyArray = [];
+emptyArray.push("James", "Keely");
+console.log(emptyArray);
+
+// Not empty array
+
+var array = ["James"];
+array.unshift("Keely");
+alert(array);
+
+/* ===== Inserting into array with loop then lopp original array (no point just wanted to see if it worked) ===== */
+
+var emptyArray = [];
+
+for (var i = 1; i <= 100; i++) {
+    emptyArray.push(i);
+}
+
+for (var emptyArray = 1; emptyArray <= 100; emptyArray++) {
+    if (emptyArray % 3 === 0 && emptyArray % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (emptyArray % 3 === 0) {
+        console.log("Fizz");
+    } else if (emptyArray % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(emptyArray);
+    }
+}
+
+/* ===== Remove first element from Array ===== */
+
+var array = ["James", "Keely"];
+array.shift();
+console.log(array);
+
+/* ===== Remove random element from Array ===== */
+
+var pets = ["dog", "cat", "ox", "duck", "frog"];
+pets.splice(1, 2);
+console.log(pets);
+
+/* ===== Remove section element from Array ===== */
+
+var pets = ["dog", "cat", "ox", "duck", "frog"];
+pets = pets.slice(3, 5);
+console.log(pets);
+
+/* ===== Insert "L" into the array between "M" and "XL".  ===== */
+
+var sizes = ["S", "M", "XL", "XXL", "XXXL"];
+sizes.splice(2, 0, "L");
+console.log(sizes);
