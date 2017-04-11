@@ -252,3 +252,73 @@ for (var i = 0; i < myArray.length; i++) {
   }
   break;
 }
+
+/* ===== Basic nested for loop.  ===== */
+
+for (var i = 0; i < 5; i++) {
+  for (var j = 0; j < 5; j++) {
+    x = i + j;
+    console.log(x);
+  }
+}
+
+// with all combos of two arrays........
+
+var array1 = ["Jimsee", "Keely"];
+var array2 = ["Waller", "Hands", "Bong", "Chong"];
+var combos = [];
+var count = 0;
+for (var i = 0; i < array1.length; i++) {
+  for (var j = 0; j < array2.length; j++) {
+    combos[count] = array1[i] + " " + array2[j];
+    count++;
+  }
+}
+console.log(combos);
+
+/* ===== Change state of array.  ===== */
+
+myArray = myArray.toLowerCase();
+myArray = myArray.toUpperCase();
+
+/* ===== Slicing a variable.  ===== */
+
+var x = "James Waller";
+var y = x.slice(3, 9);
+console.log(y);
+
+/* ===== Finding the character number of the firt instance of a word.  ===== */
+
+var x = "Hello my name is James";
+console.log(x.indexOf("James"));
+
+/* ===== Finding the character number of the firt instance of a word.  ===== */
+
+var x = "Hello my name is James, James is my name.";
+console.log(x.lastIndexOf("James"));
+
+/* ===== Finding a specific characher of a string.  ===== */
+
+var x = "My name is James!";
+console.log(x.charAt(11));
+
+/* ===== Finding the last characher of a string.  ===== */
+
+var x = "My name is James!";
+console.log(x.charAt(x.length - 1));
+
+/* ===== Replacing.  ===== */
+
+// Once......
+
+var x = "My name is James......"
+console.log(x);
+x = x.replace("My name is James......", "......and I am swazzy!");
+console.log(x);
+
+// All instances......
+
+var x = "My name is James...... James is swazyy."
+console.log(x);
+x = x.replace(/James/g, "Keely!");
+console.log(x);
