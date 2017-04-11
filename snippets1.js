@@ -1,20 +1,3 @@
-/* ===== OO JS example ===== */
-
-function Person(name, age, race) {
-    this.name = name;
-    this.age = age;
-    this.race = race;
-    this.description = function() {
-        return this.name + ', is ' + this.age + ' years old. And is ' + this.race + '.'
-    }
-}
-
-var james = new Person("Jimsee Bong", 32, "White");
-var keely = new Person("Keely Chong", 30, "White");
-
-console.log(james.description());
-console.log(keely.description());
-
 /* ===== Adding up numbers in array example ===== */
 
 var sum = [1, 2, 3, 4, 5].reduce(add, 0);
@@ -37,6 +20,23 @@ if (a === c && b === d) {
 else {
   alert(c + " " + d + " doesn't match " + a + " " + b);
 }
+
+/* ===== OO JS example ===== */
+
+function Person(name, age, nationality) {
+    this.name = name;
+    this.age = age;
+    this.nationality = nationality;
+    this.description = function() {
+        return this.name + ', is ' + this.age + ' years old. And is ' + this.nationality + '.'
+    }
+}
+
+var james = new Person("Jimsee Bong", 32, "British");
+var keely = new Person("Keely Chong", 30, "British");
+
+console.log(james.description());
+console.log(keely.description());
 
 /* ===== Switch statement example ===== */
 
@@ -216,11 +216,39 @@ console.log(pets);
 /* ===== Remove section element from Array and into new array ===== */
 
 var pets = ["dog", "cat", "ox", "duck", "frog"];
-pets = pets.slice(3, 5);
-console.log(pets);
+newPets = pets.slice(3, 5);
+console.log(newPets);
 
 /* ===== Insert "L" into the array between "M" and "XL".  ===== */
 
 var sizes = ["S", "M", "XL", "XXL", "XXXL"];
 sizes.splice(2, 0, "L");
 console.log(sizes);
+
+/* ===== Simple array iteration.  ===== */
+
+var numArray = [5, 10];
+for (var i = 0; i < numArray.length; i++) {
+  if (numArray[i] === numArray[i]) {  
+    alert(numArray[i]);
+  }
+}
+
+// or.........
+
+var numArray = [5, 10];
+for (var i = 0; i < numArray.length; i++) {
+  if ((numArray[i] === 5) || (numArray[i] === 10)) {  
+    alert(numArray[i]);
+  }
+}
+
+/* ===== Break out of loop once match is found.  ===== */
+
+var myArray = [3, 4];
+for (var i = 0; i < myArray.length; i++) {
+  if (myArray[i] === myArray[i]) {
+    alert(myArray[i]);
+  }
+  break;
+}
