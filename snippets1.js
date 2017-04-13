@@ -8,6 +8,23 @@ function add(a, b) {
 
 console.log(sum);
 
+/* ===== Adding up numbers example ===== */
+
+function sum(a, b) {
+  var c = a + b;
+  alert("The sum is " + c)
+}
+sum(5, 100);
+
+/* ===== Concatinating strings ===== */
+
+var part1 = "The medium ";
+var part2 = "is the message.";
+displayIdiom(part1, part2);
+function displayIdiom(a, b) {
+  alert(a + b);
+}
+
 /* ===== Simple if/else with conditions ===== */
 
 var a = "James";
@@ -133,8 +150,8 @@ Person.prototype.initialize = function(name, age) {
 
 var Teacher = function() {
 	// Use this.teach as we are already inside Teacher
-    this.teach = function(whateveryouwantinherewillhaveteachfedinfromline145) {
-        console.log(this.name + " is now teaching " + whateveryouwantinherewillhaveteachfedinfromline145);
+    this.teach = function(whateveryouwantinherewillhaveteachfedinfromline162) {
+        console.log(this.name + " is now teaching " + whateveryouwantinherewillhaveteachfedinfromline162);
         console.log(this.name + " is " + this.age)
     }
 }
@@ -219,13 +236,13 @@ var pets = ["dog", "cat", "ox", "duck", "frog"];
 newPets = pets.slice(3, 5);
 console.log(newPets);
 
-/* ===== Insert "L" into the array between "M" and "XL".  ===== */
+/* ===== Insert "L" into the array between "M" and "XL". ===== */
 
 var sizes = ["S", "M", "XL", "XXL", "XXXL"];
 sizes.splice(2, 0, "L");
 console.log(sizes);
 
-/* ===== Simple array iteration.  ===== */
+/* ===== Simple array iteration. ===== */
 
 var numArray = [5, 10];
 for (var i = 0; i < numArray.length; i++) {
@@ -243,7 +260,7 @@ for (var i = 0; i < numArray.length; i++) {
   }
 }
 
-/* ===== Break out of loop once match is found.  ===== */
+/* ===== Break out of loop once match is found. ===== */
 
 var myArray = [3, 4];
 for (var i = 0; i < myArray.length; i++) {
@@ -253,7 +270,7 @@ for (var i = 0; i < myArray.length; i++) {
   break;
 }
 
-/* ===== Basic nested for loop.  ===== */
+/* ===== Basic nested for loop. ===== */
 
 for (var i = 0; i < 5; i++) {
   for (var j = 0; j < 5; j++) {
@@ -276,38 +293,38 @@ for (var i = 0; i < array1.length; i++) {
 }
 console.log(combos);
 
-/* ===== Change state of array.  ===== */
+/* ===== Change state of array. ===== */
 
 myArray = myArray.toLowerCase();
 myArray = myArray.toUpperCase();
 
-/* ===== Slicing a variable.  ===== */
+/* ===== Slicing a variable. ===== */
 
 var x = "James Waller";
 var y = x.slice(3, 9);
 console.log(y);
 
-/* ===== Finding the character number of the firt instance of a word.  ===== */
+/* ===== Finding the character number of the firt instance of a word. ===== */
 
 var x = "Hello my name is James";
 console.log(x.indexOf("James"));
 
-/* ===== Finding the character number of the firt instance of a word.  ===== */
+/* ===== Finding the character number of the firt instance of a word. ===== */
 
 var x = "Hello my name is James, James is my name.";
 console.log(x.lastIndexOf("James"));
 
-/* ===== Finding a specific characher of a string.  ===== */
+/* ===== Finding a specific characher of a string. ===== */
 
 var x = "My name is James!";
 console.log(x.charAt(11));
 
-/* ===== Finding the last characher of a string.  ===== */
+/* ===== Finding the last characher of a string. ===== */
 
 var x = "My name is James!";
 console.log(x.charAt(x.length - 1));
 
-/* ===== Replacing.  ===== */
+/* ===== Replacing. ===== */
 
 // Once......
 
@@ -322,3 +339,126 @@ var x = "My name is James...... James is swazyy."
 console.log(x);
 x = x.replace(/James/g, "Keely!");
 console.log(x);
+
+/* ===== Rounding numbers. ===== */
+
+var w = Math.round(1.567);
+var x = Math.round(1.467);
+var y = Math.ceil(1.567);
+var z = Math.floor(1.567);
+console.log(w,x,y,z);
+
+/* ===== Generate random number 1-6. ===== */
+
+var bigDecimal = Math.random();
+var improvedNum = (bigDecimal * 6) + 1;
+var numberOfStars = Math.floor(improvedNum);
+console.log(numberOfStars);
+
+/* ===== Gets rid of decimal point. ===== */
+
+var x = "10.5";
+alert(parseInt(x) + parseInt(x));
+
+/* ===== Keeps decimal point. ===== */
+
+var x = "10.99";
+alert(parseFloat(x) + parseFloat(x));
+
+/* ===== Convert string to number. ===== */
+
+var x = "10"
+alert(Number(x));
+
+/* ===== Convert number to string. ===== */
+
+var x = "10"
+alert(x.toString() + x.toString());
+
+/* ===== Convert number to fixed amount of decimal places. ===== */
+
+var x = 10.55678;
+alert(x.toFixed(2));
+
+/* ===== Get the Day. ===== */
+
+var y = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var x = new Date();
+x = x.getDay();
+alert(y[x]);
+
+// Other methods......
+
+getDay()    
+getFullYear()   
+getHours()
+getMilliseconds()  
+getMinutes() 
+getMonth() 
+getSeconds()  
+getTime()  
+
+// examples ......
+
+var d = new Date();
+document.getElementById("myDiv").innerHTML = d.getTime();
+
+var x = new Date;
+alert(x.getFullYear());
+
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+var now = new Date();
+var monthNow = now.getMonth();
+alert(months[monthNow]);
+
+/* ===== Set the date, day, time, etc. Methods. ===== */
+
+var d = new Date();
+d.setFullYear(2001);
+console.log(d);
+
+var d = new Date();
+d.setMonth(11);
+console.log(d);
+
+var d = new Date();
+d.setDate(15);
+console.log(d);
+
+var d = new Date();
+d.setHours(13);
+console.log(d);
+
+var d = new Date();
+d.setMinutes(05);
+console.log(d);
+
+var d = new Date();
+d.setSeconds(55);
+console.log(d);
+
+var d = new Date();
+d.setMilliseconds(867);
+console.log(d);
+
+// example......
+
+var now = new Date();
+var nowYear = now.getFullYear(); 
+now.setFullYear(nowYear - 100);
+console.log(now);
+
+/* ===== Returning data from a function. ===== */
+
+function x(a, b, c) {
+    return a * b * c;
+}
+
+var y = x(100, 2, 5); 
+// Values are input to x in the paremeters of the function call and stored in the y variable
+
+console.log(y);
+
+
+
+
