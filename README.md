@@ -1,3 +1,3 @@
 # code-snippets
 
-Re-usable snippets of simple js code.
+Reusable snippets of simple js code.
